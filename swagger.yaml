@@ -1,5 +1,34 @@
 basePath: /
 definitions:
+  Companies:
+    items:
+      $ref: '#/definitions/Company'
+    type: array
+    x-go-package: goswagger/models
+  Company:
+    properties:
+      id:
+        description: |-
+          Id of the company
+          in: int64
+        format: int64
+        type: integer
+        x-go-name: Id
+      name:
+        description: |-
+          Name of the company
+          in: string
+        type: string
+        x-go-name: Name
+      status:
+        description: |-
+          Status of the company
+          in: int64
+        format: int64
+        type: integer
+        x-go-name: Status
+    type: object
+    x-go-package: goswagger/models
   ReqAddCompany:
     properties:
       name:
@@ -116,6 +145,70 @@ paths:
       - admin
 produces:
 - application/json
+responses:
+  CommonError:
+    description: ""
+    headers:
+      message:
+        description: |-
+          Message of the error
+          in: string
+        type: string
+      status:
+        description: |-
+          Status of the error
+          in: int64
+        format: int64
+        type: integer
+  CommonSuccess:
+    description: ""
+    headers:
+      message:
+        description: |-
+          Message of the error
+          in: string
+        type: string
+      status:
+        description: |-
+          Status of the error
+          in: int64
+        format: int64
+        type: integer
+  GetCompanies:
+    description: ""
+    headers:
+      data: {}
+      message:
+        description: |-
+          Message of the response
+          in: string
+        type: string
+      status:
+        description: |-
+          Status of the error
+          in: int64
+        format: int64
+        type: integer
+    schema:
+      $ref: '#/definitions/Companies'
+  GetCompany:
+    description: ""
+    headers:
+      data:
+        description: Companies for this user
+      message:
+        description: |-
+          Message of the response
+          in: string
+        type: string
+      status:
+        description: |-
+          Status of the error
+          in: int64
+        format: int64
+        type: integer
+    schema:
+      $ref: '#/definitions/Company'
 schemes:
 - http
 - https

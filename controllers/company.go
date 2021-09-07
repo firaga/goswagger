@@ -24,7 +24,7 @@ func NewBaseHandlerSqlx(db *sqlx.DB) *BaseHandlerSqlx {
 	}
 }
 
-// swagger:model CommonError
+// swagger:response CommonError
 type CommonError struct {
 	// Status of the error
 	// in: int64
@@ -34,7 +34,7 @@ type CommonError struct {
 	Message string `json:"message"`
 }
 
-// swagger:model CommonSuccess
+// swagger:response CommonSuccess
 type CommonSuccess struct {
 	// Status of the error
 	// in: int64
@@ -44,7 +44,7 @@ type CommonSuccess struct {
 	Message string `json:"message"`
 }
 
-// swagger:model GetCompanies
+// swagger:response GetCompanies
 type GetCompanies struct {
 	// Status of the error
 	// in: int64
@@ -55,7 +55,7 @@ type GetCompanies struct {
 	Data    *models.Companies `json:"data"`
 }
 
-// swagger:model GetCompany
+// swagger:response GetCompany
 type GetCompany struct {
 	// Status of the error
 	// in: int64
