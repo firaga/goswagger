@@ -19,7 +19,7 @@ definitions:
     x-go-package: goswagger/models
 host: localhost:5000
 info:
-  title: 'Comapany Api:'
+  title: 'Company Api:'
   version: 0.0.1
 paths:
   /admin/company/:

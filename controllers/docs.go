@@ -1,4 +1,4 @@
-// Package controllers Comapany Api:
+// Package controllers Company Api:
 //   version: 0.0.1
 //   title: Comapany Api
 //  Schemes: http, https
